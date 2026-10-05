@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-bottom: 0.4rem;
+}
+
+header p {
+  color: #94a3b8;
+  font-size: 1.05rem;
+}
+
+#stats {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.stat-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 1.2rem 1.8rem;
+  text-align: center;
+  min-width: 120px;
+}
+
+.stat-card.critical {
+  border-color: #ef4444;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+#sensors-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.sensor-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 1.4rem;
+  border-left-width: 6px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.sensor-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.sensor-card.normal {
+  border-left-color: #22c55e;
+}
+
+.sensor-card.warning {
+  border-left-color: #eab308;
+}
+
+.sensor-card.critical {
+  border-left-color: #ef4444;
+}
+
+.sensor-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.8rem;
+  color: #f8fafc;
+}
+
+.sensor-card p {
+  margin-bottom: 0.35rem;
+  font-size: 0.95rem;
+  color: #cbd5e1;
+}
+
+.sensor-card strong {
+  color: #94a3b8;
+}
+
+.status-badge {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.sensor-card.normal .status-badge {
+  color: #22c55e;
+}
+
+.sensor-card.warning .status-badge {
+  color: #eab308;
+}
+
+.sensor-card.critical .status-badge {
+  color: #ef4444;
+}
+
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  color: #64748b;
+  font-size: 0.9rem;
+}
